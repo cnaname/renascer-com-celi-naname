@@ -33,6 +33,7 @@ function Index() {
       <SpecialtiesSection />
       <ProcessSection />
       <AboutSection />
+      <ClinicGallery />
       <FaqSection />
       <FooterSection />
       <WhatsAppButton />
