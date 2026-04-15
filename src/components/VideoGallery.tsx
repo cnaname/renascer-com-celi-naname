@@ -9,22 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 
-const VIDEOS = [
-  "v09044g40000d0d5mufog65gedseua60.mp4",
-  "v09044g40000d0d5vgfog65t38kg1gng.mp4",
-  "v09044g40000d0d5vqvog65mhaj6ngng.mp4",
-  "v09044g40000d0d604nog65gr8ms2c3g.mp4",
-  "v09044g40000d0d60c7og65lnefa4r9g.mp4",
-  "v09044g40000d0d60qnog65oklghmteg.mp4",
-  "v09044g40000d0d622nog65int25bjlg.mp4",
-  "v09044g40000d0d6a87og65knfa77tk0.mp4",
-  "v09044g40000d0d6agnog65pkh9rhf70.mp4",
-  "v09044g40000d0d6g67og65q2i0h8ulg.mp4",
-  "v09044g40000d0d6gdnog65j8hemd2ng.mp4",
-  "v09044g40000d0dko7fog65gedt9eebg.mp4",
-  "v09044g40000d0dko7fog65mmdv30iog.mp4",
-  "v09044g40000d0eeh4fog65uftr5a2sg.mp4",
-];
+const VIDEOS = Array.from({ length: 14 }, (_, i) => `depoimento-${i + 1}.mp4`);
 
 function VideoCard({ src }: { src: string }) {
   const videoRef = React.useRef<HTMLVideoElement>(null);
@@ -50,7 +35,6 @@ function VideoCard({ src }: { src: string }) {
         
         <video
           ref={videoRef}
-          src={`/videos/${src}`}
           className="w-full h-full object-cover bg-black/10"
           loop
           muted
@@ -58,12 +42,15 @@ function VideoCard({ src }: { src: string }) {
           preload="metadata"
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
-        />
+        >
+          <source src={`videos/${src}`} type="video/mp4" />
+          Seu navegador não suporta este vídeo.
+        </video>
 
         {/* Overlay Play Button */}
         <div 
           onClick={togglePlay}
-          className="absolute inset-0 z-10 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute inset-0 z-10 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <div className="w-16 h-16 rounded-full bg-teal/80 flex items-center justify-center text-white shadow-lg backdrop-blur-sm transform group-hover:scale-110 transition-transform">
             {isPlaying ? <Pause size={32} /> : <Play size={32} className="ml-1" />}
@@ -72,8 +59,8 @@ function VideoCard({ src }: { src: string }) {
 
         {/* Small Play label if not playing */}
         {!isPlaying && (
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 animate-pulse">
-            <span className="bg-teal text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold">
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-pulse pointer-events-none">
+            <span className="bg-teal text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold whitespace-nowrap">
               Assistir Relato
             </span>
           </div>
