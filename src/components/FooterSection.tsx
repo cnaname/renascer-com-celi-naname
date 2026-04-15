@@ -29,7 +29,14 @@ export default function FooterSection() {
           </div>
           <div className="flex items-start gap-3">
             <Instagram size={18} className="text-teal shrink-0 mt-0.5" />
-            <p>@celinaname</p>
+            <a 
+              href="https://instagram.com/celinaname" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-teal transition-colors"
+            >
+              @celinaname
+            </a>
           </div>
         </div>
 
