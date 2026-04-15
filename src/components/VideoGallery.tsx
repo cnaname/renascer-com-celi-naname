@@ -43,16 +43,16 @@ function VideoCard({ src }: { src: string }) {
         
         <video
           ref={videoRef}
-          className="w-full h-full object-cover bg-black/10"
+          key={src}
+          src={`/videos/${src}`}
+          className="w-full h-full object-cover bg-black/5"
           loop
           muted
           playsInline
-          poster={poster}
-          preload="metadata"
+          preload="auto"
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
         >
-          <source src={`/videos/${src}`} type="video/mp4" />
           Seu navegador não suporta este vídeo.
         </video>
 
