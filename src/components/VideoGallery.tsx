@@ -35,17 +35,13 @@ function VideoCard({ src }: { src: string }) {
   };
 
   return (
-    <div className="relative group mx-auto max-w-[280px]">
-      {/* Phone Mockup Wrapper */}
-      <div className="relative rounded-[2.5rem] border-[8px] border-secondary bg-secondary shadow-2xl overflow-hidden aspect-[9/16] ring-1 ring-border">
-        {/* Notch */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-secondary rounded-b-xl z-20" />
-        
+    <div className="relative group mx-auto w-full max-w-[320px]">
+      <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[9/16] bg-black">
         <video
           ref={videoRef}
           key={src}
           src={`/videos/${src}`}
-          className="w-full h-full object-cover bg-black/5"
+          className="w-full h-full object-contain"
           loop
           muted
           playsInline
@@ -59,7 +55,7 @@ function VideoCard({ src }: { src: string }) {
         {/* Overlay Play Button */}
         <div 
           onClick={togglePlay}
-          className="absolute inset-0 z-10 flex items-center justify-center bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
+          className="absolute inset-0 z-10 flex items-center justify-center bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer"
         >
           <div className="w-16 h-16 rounded-full bg-teal/80 flex items-center justify-center text-white shadow-lg backdrop-blur-sm transform group-hover:scale-110 transition-transform">
             {isPlaying ? <Pause size={32} /> : <Play size={32} className="ml-1" />}
@@ -68,8 +64,8 @@ function VideoCard({ src }: { src: string }) {
 
         {/* Small Play label if not playing */}
         {!isPlaying && (
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-pulse pointer-events-none">
-            <span className="bg-teal text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold whitespace-nowrap">
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 animate-pulse pointer-events-none">
+            <span className="bg-teal/90 text-white text-[10px] uppercase tracking-widest px-3 py-1 rounded-full font-bold whitespace-nowrap shadow-sm">
               Assistir Relato
             </span>
           </div>
