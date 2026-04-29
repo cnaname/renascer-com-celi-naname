@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://celi-soul-liberator.lovable.app/sitemap.xml

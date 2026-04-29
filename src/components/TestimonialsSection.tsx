@@ -48,7 +48,14 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-foreground/80 leading-relaxed mb-6 italic flex-grow text-sm">"{t.text}"</p>
               <div className="flex items-center gap-4 border-t border-border pt-4">
-                <img src={t.photo} alt={t.name} className="w-12 h-12 rounded-full object-cover border border-teal/20" />
+              <img
+                src={t.photo}
+                alt={`Depoimento de ${t.name} sobre hipnoterapia com Celi Naname`}
+                className="w-12 h-12 rounded-full object-cover border border-teal/20"
+                loading="lazy"
+                width={48}
+                height={48}
+              />
                 <div>
                   <p className="font-semibold text-foreground text-sm">{t.name}</p>
                   <p className="text-muted-foreground text-xs">Cliente</p>
