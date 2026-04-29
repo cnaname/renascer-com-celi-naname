@@ -11,10 +11,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/60 to-transparent z-10" />
         <img
           src={celiHero}
-          alt="Celi Naname - Hipnoterapeuta"
+          alt="Celi Naname, hipnoterapeuta em São Paulo - Hipnose Ericksoniana"
           className="w-full h-full object-cover object-top"
           width={600}
           height={800}
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
 
@@ -54,10 +56,12 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-transparent z-10" />
         <img
           src={celiHero}
-          alt="Celi Naname"
+          alt="Celi Naname, hipnoterapeuta"
           className="w-full h-full object-cover object-top"
           width={600}
           height={800}
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
     </section>
