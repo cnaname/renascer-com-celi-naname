@@ -51,16 +51,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Mobile: photo at bottom */}
-      <div className="lg:hidden absolute bottom-0 left-0 right-0 h-64 z-10">
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-transparent z-10" />
+      {/* Mobile: photo below content (in flow, no overlap) */}
+      <div className="lg:hidden relative w-full h-80 z-10">
+        <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-navy to-transparent z-10" />
         <img
           src={celiHero}
           alt="Celi Naname, hipnoterapeuta"
           className="w-full h-full object-cover object-top"
           width={600}
           height={800}
-          fetchPriority="high"
           decoding="async"
         />
       </div>
