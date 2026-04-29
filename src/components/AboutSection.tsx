@@ -28,9 +28,11 @@ export default function AboutSection() {
           <div className="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
             <img
               src={celiAbout}
-              alt="Celi Naname"
+              alt="Celi Naname, hipnoterapeuta especialista em Hipnose Ericksoniana"
               className="w-full h-full object-cover"
               loading="lazy"
+              width={600}
+              height={750}
             />
           </div>
 

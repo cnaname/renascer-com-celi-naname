@@ -3,16 +3,24 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "Vou perder o controle?",
-    a: "Não. Você permanece consciente e no controle durante todo o processo. A hipnose é um estado natural de foco e relaxamento.",
+    q: "Vou perder o controle durante a hipnose?",
+    a: "Não. Você permanece consciente e no controle durante todo o processo. A hipnose é um estado natural de foco e relaxamento profundo, semelhante ao momento antes de dormir.",
   },
   {
-    q: "Quantas sessões preciso?",
-    a: "As mudanças são rápidas por acessarmos o inconsciente, mas o plano é individualizado para cada pessoa.",
+    q: "Quantas sessões de hipnoterapia preciso?",
+    a: "As mudanças costumam ser rápidas porque acessamos diretamente o inconsciente. O plano é sempre individualizado conforme seus objetivos e o tema trabalhado.",
   },
   {
-    q: "Atende online?",
-    a: "Sim, com a mesma eficácia do presencial para brasileiros em todo o mundo.",
+    q: "A hipnose online realmente funciona?",
+    a: "Sim. O atendimento online tem a mesma eficácia do presencial e permite atender brasileiros em todo o mundo, com total privacidade e conforto.",
+  },
+  {
+    q: "A hipnose ajuda a tratar ansiedade e crises de pânico?",
+    a: "Sim. A Hipnose Ericksoniana é uma das abordagens mais eficazes para acessar a raiz emocional da ansiedade, do estresse e das crises de pânico, promovendo alívio rápido e duradouro.",
+  },
+  {
+    q: "Hipnose é seguro? Tem contraindicação?",
+    a: "A hipnoterapia é segura quando conduzida por profissional qualificado. Não é indicada apenas em casos específicos como psicose ativa, sempre avaliados na sessão inicial.",
   },
 ];
 
